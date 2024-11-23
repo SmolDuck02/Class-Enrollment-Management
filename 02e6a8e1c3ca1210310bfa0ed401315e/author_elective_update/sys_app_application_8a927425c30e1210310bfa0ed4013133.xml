@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order>100</order>
+        <roles>x_1523461_class_en.teacher</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>l.baclayon</sys_created_by>
+        <sys_created_on>2024-11-23 06:17:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8a927425c30e1210310bfa0ed4013133</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Classes</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_app_application_8a927425c30e1210310bfa0ed4013133</sys_update_name>
+        <sys_updated_by>l.baclayon</sys_updated_by>
+        <sys_updated_on>2024-11-23 06:17:10</sys_updated_on>
+        <title>My Classes</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</application>
+        <file_path/>
+        <instance_id>90affd7b1b6e75d4ba5ceb9b2d4bcb96</instance_id>
+        <instance_name>dev222415</instance_name>
+        <name>sys_app_application_8a927425c30e1210310bfa0ed4013133</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name/><order>100</order><roles>x_1523461_class_en.teacher</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>l.baclayon</sys_created_by><sys_created_on>2024-11-23 06:17:10</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>8a927425c30e1210310bfa0ed4013133</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Classes</sys_name><sys_overrides/><sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package><sys_policy/><sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope><sys_update_name>sys_app_application_8a927425c30e1210310bfa0ed4013133</sys_update_name><sys_updated_by>l.baclayon</sys_updated_by><sys_updated_on>2024-11-23 06:17:10</sys_updated_on><title>My Classes</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-140388872</payload_hash>
+        <record_name>My Classes</record_name>
+        <reverted_from/>
+        <source>4ae6ac25c3ca1210310bfa0ed401317f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>l.baclayon</sys_created_by>
+        <sys_created_on>2024-11-23 06:17:10</sys_created_on>
+        <sys_id>42c23825c30e1210310bfa0ed40131bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19357aac95a0000001</sys_recorded_at>
+        <sys_updated_by>l.baclayon</sys_updated_by>
+        <sys_updated_on>2024-11-23 06:17:10</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>8ec27ce19b0e1210fe1f4a81c8ebde08</update_guid>
+        <update_guid_history>8ec27ce19b0e1210fe1f4a81c8ebde08:-140388872</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="My Classes">49337425c30e1210310bfa0ed401313a</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>l.baclayon</sys_created_by>
+        <sys_created_on>2024-11-23 06:19:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>0c99095b9b10429180be1a3e7275bc11</sys_id>
+        <sys_metadata>8a927425c30e1210310bfa0ed4013133</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Classes</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_scope_delete display_value="">0405e08b62054e2090a0f39653c91640</sys_scope_delete>
+        <sys_update_name>sys_app_application_8a927425c30e1210310bfa0ed4013133</sys_update_name>
+        <sys_update_version display_value="sys_app_application_8a927425c30e1210310bfa0ed4013133">42c23825c30e1210310bfa0ed40131bf</sys_update_version>
+        <sys_updated_by>l.baclayon</sys_updated_by>
+        <sys_updated_on>2024-11-23 06:19:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
