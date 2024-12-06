@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="0f0824a5c3ca1210310bfa0ed4013175" label="Class" max_length="40" name="x_1523461_class_en_class" type="collection">
-        <element attributes="edge_encryption_enabled=true" display="true" label="Section" max_length="40" name="section" type="string"/>
         <element attributes="encode_utf8=false" label="Teacher" max_length="32" name="teacher" reference="sys_user" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Courses" max_length="40" name="courses" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Section" max_length="40" name="section" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Courses" max_length="40" name="courses" reference="x_1523461_class_en_course" type="glide_list"/>
         <index name="index">
             <element name="teacher"/>
         </index>

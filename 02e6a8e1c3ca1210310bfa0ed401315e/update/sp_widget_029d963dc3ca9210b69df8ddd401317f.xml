@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $http) {
+
+    var c = this;
+    // Function to assign a value and make a server call
+    c.show = function(i) {
+        c.data.i = $scope.receivedValue; // Assign value to `c.data.i`
+        
+        // Trigger server script with the updated data
+        c.server.get().then(function(response) {
+            // Optionally handle the response here
+            console.log('Server Response:', response);
+        });
+    };
+
+    // Function to log the selected value
+    $scope.logSelectedValue = function() {
+        alert("You have selected the class: " + $scope.class.label);
+    };
+
+	$scope.receivedValue = null;
+
+    // Listen for the broadcasted event
+    $scope.$on('selectedValueChanged', function(event, newValue) {
+        // Update the receivedValue when the broadcast is received
+        $scope.receivedValue = newValue;
+        console.log('Received selected value: ', newValue);
+    });
+};
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Style the container to ensure proper spacing */&#13;
+div {&#13;
+    display: flex;&#13;
+    flex-direction: column;&#13;
+  /*  gap: 1rem; */&#13;
+  /* Adds spacing between elements */&#13;
+    width: 100%; /* Ensures the container takes up full width */&#13;
+    max-width: 600px; /* Optional: Sets a max width for better usability */&#13;
+    margin: 0 auto; /* Centers the container on the page */&#13;
+  padding-bottom: 2rem;&#13;
+}&#13;
+&#13;
+/* Style the label */&#13;
+label {&#13;
+    font-size: 1rem;&#13;
+    font-weight: bold;&#13;
+    color: #333; /* A classy dark color */&#13;
+}&#13;
+&#13;
+/* Style the dropdown */&#13;
+select {&#13;
+    width: 100%; /* Makes the dropdown fill the parent width */&#13;
+    padding: 0.5rem;&#13;
+    font-size: 1rem;&#13;
+    border: 2px solid #ccc; /* Subtle border */&#13;
+    border-radius: 5px; /* Slightly rounded corners */&#13;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */&#13;
+    background-color: #fff; /* Clean white background */&#13;
+    color: #333; /* Text color */&#13;
+    transition: border-color 0.3s ease; /* Smooth hover effect */&#13;
+}&#13;
+&#13;
+/* Change the border color when the dropdown is focused */&#13;
+select:focus {&#13;
+    border-color: #007bff; /* Blue border on focus */&#13;
+    outline: none; /* Removes the default focus outline */&#13;
+}&#13;
+&#13;
+/* Style the button */&#13;
+button {&#13;
+    padding: 0.7rem;&#13;
+    width: 100%; /* Makes the button fill the parent width */&#13;
+    font-size: 1rem;&#13;
+    font-weight: bold;&#13;
+    text-transform: uppercase;&#13;
+    color: #fff; /* White text */&#13;
+    background-color: $brand-primary;  /* Primary blue background */&#13;
+    border: none;&#13;
+    border-radius: 5px; /* Rounded corners for the button */&#13;
+    cursor: pointer; /* Changes the cursor on hover */&#13;
+    transition: background-color 0.3s ease, transform 0.2s ease;&#13;
+}&#13;
+&#13;
+/* Change the background and add a hover effect */&#13;
+button:hover {&#13;
+    filter: brightness(90%);  /* Darker blue on hover */&#13;
+    transform: scale(1.02); /* Slight zoom effect */&#13;
+  border-radius: 5px; &#13;
+}&#13;
+&#13;
+/* Add a pressed effect */&#13;
+button:active {&#13;
+    transform: scale(0.98); /* Slight shrink effect */&#13;
+    filter: birghtness(80%); /* Even darker blue */&#13;
+  border-radius: 5px; /&#13;
+}&#13;
+</css>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,display_field</field_list>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Class Dropdown</name>
+        <option_schema>[{"name":"always_show","section":"Behavior","label":"Show even when empty","type":"boolean"},{"name":"panel_body_height","section":"Presentation","label":"List body height","type":"string"},{"name":"image_field","section":"Presentation","label":"Image field","type":"field_name"},{"name":"secondary_fields","section":"Data","label":"Secondary fields","type":"field_list"},{"name":"rounded_images","section":"Presentation","label":"Rounded images","type":"boolean"},{"displayValue":"Page","name":"list_page","section":"Data","label":"List page","type":"reference","value":"sp_page","ed":{"reference":"sp_page"}},{"name":"hide_footer","section":"Presentation","label":"Hide Footer","type":"boolean"},{"displayValue":"UI View","hint":"View to use when target page is a form","name":"view","section":"Behavior","label":"View","type":"reference","value":"sys_ui_view","ed":{"reference":"sys_ui_view"}},{"hint":"If checked, Simple List will not automatically updated based on changes to the filtered records","name":"disable_record_watcher","section":"Behavior","label":"Disable record watcher","type":"boolean"},{"name":"filter_acls","section":"Data","default_value":"false","label":"Enforce field-level Read ACLs on Filter query terms (may alter the query for unprivileged users)","type":"boolean"}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    // Query the Course table (replace with actual course table name if needed)
+    var tableName = options.table;  // Default to course table if not provided
+	var gr = new GlideRecord(tableName);
+
+	// Retrieve secondary field(s) for processing
+    // Retrieve secondary field(s) for processing
+    var secondaryFields = options.secondary_fields ? options.secondary_fields.split(",") : [];
+
+
+    // Filter records based on `receivedValue` (assumes it comes from the client)
+    var receivedValue = input && input.i; // `input` contains the receivedValue from the client
+	console.log(receivedValue + " rfrfrf");
+
+    // Ensure that `receivedValue` is not null or empty
+    if (receivedValue) {
+		console.log('er');
+        gr.addQuery('courses', 'CONTAINS', receivedValue); // Filter where `courses` field contains the value
+    } else {
+		console.log('err');
+        gr.query(); // If no filter value is received, fetch all records
+    }
+    var courses = [];
+	
+	while (gr.next()) {
+        var courseName = gr.getValue(options.display_field);  // Get the value of the display field (e.g., 'course_name')
+		var courseId = gr.getUniqueValue();  // Get the sys_id for the course
+
+		var cn = gr.getValue('courses');
+		console.log(cn);
+
+        // Only add courses with valid names and IDs
+        if (courseName && courseId) {
+            courses.push({
+                label: courseName,  // Set the course name as the label
+                value: courseId     // Set the sys_id as the value
+            });
+        }
+    }
+
+    // Pass the course list to the client
+    data.courses = courses;
+	data.tableName = tableName.split('_').pop();
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-24 08:42:19</sys_created_on>
+        <sys_id>029d963dc3ca9210b69df8ddd401317f</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Class Dropdown</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sp_widget_029d963dc3ca9210b69df8ddd401317f</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-24 12:08:16</sys_updated_on>
+        <template><![CDATA[<div>
+    <label for="Dropdown">Select a {{data.tableName}}:</label>
+    <select 
+        id="Dropdown" 
+        ng-model="class"  
+        ng-options="course.label for course in c.data.courses track by course.value"
+            ng-change="logSelectedValue()">
+        <option value="">-- Select a {{data.tableName}} --</option>
+    </select>
+</div>
+
+
+]]></template>
+    </sp_widget>
+</record_update>

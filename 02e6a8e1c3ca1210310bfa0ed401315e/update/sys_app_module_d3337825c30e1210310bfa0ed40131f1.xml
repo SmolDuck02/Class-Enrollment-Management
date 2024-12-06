@@ -27,19 +27,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d3337825c30e1210310bfa0ed40131f1</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>My Classes</sys_name>
         <sys_overrides/>
         <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
         <sys_update_name>sys_app_module_d3337825c30e1210310bfa0ed40131f1</sys_update_name>
-        <sys_updated_by>l.baclayon</sys_updated_by>
-        <sys_updated_on>2024-11-23 06:53:05</sys_updated_on>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-25 15:09:05</sys_updated_on>
         <timeline_page/>
         <title>My Classes</title>
         <uncancelable>false</uncancelable>
-        <view_name/>
+        <view_name>my_classes_list</view_name>
         <window_name/>
     </sys_app_module>
 </record_update>

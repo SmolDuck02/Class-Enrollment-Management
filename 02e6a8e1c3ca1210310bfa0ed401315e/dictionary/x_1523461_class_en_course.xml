@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="bc97e865c3ca1210310bfa0ed4013138" label="Course" max_length="40" name="x_1523461_class_en_course" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Course Name" max_length="250" name="course_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Description" max_length="1000" name="description" type="string"/>
         <element attributes="edge_encryption_enabled=true" display="true" label="Course ID" max_length="40" name="course_id" type="string"/>
         <element label="Units" max_length="40" name="units" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" label="Course Name" max_length="250" name="course_name" type="string"/>
     </element>
 </database>

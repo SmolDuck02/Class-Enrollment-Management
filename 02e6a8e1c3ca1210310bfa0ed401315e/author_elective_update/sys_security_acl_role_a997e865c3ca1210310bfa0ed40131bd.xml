@@ -41,7 +41,7 @@
         <update_guid_history>ed97e86521ca1210332f6d32784554bf:702304127</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="x_1523461_class_en_course.Administrator">56d03c61c30e1210310bfa0ed401313d</sys_audit_delete>
+        <sys_audit_delete display_value="">56d03c61c30e1210310bfa0ed401313d</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-23 06:08:43</sys_created_on>
@@ -51,7 +51,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_1523461_class_en_course.Administrator</sys_name>
         <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
-        <sys_parent display_value="x_1523461_class_en_course">e597e865c3ca1210310bfa0ed40131ba</sys_parent>
+        <sys_parent display_value="">e597e865c3ca1210310bfa0ed40131ba</sys_parent>
         <sys_policy/>
         <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
         <sys_scope_delete display_value="">0405e08b62054e2090a0f39653c91640</sys_scope_delete>

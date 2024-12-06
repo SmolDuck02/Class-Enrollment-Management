@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1523461_class_en.GetTableRecords</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetTableRecords</name>
+        <script><![CDATA[var GetTableRecords = Class.create();
+GetTableRecords.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+
+   getRecords: function() {
+        var records = [];
+        var gr = new GlideRecord('x_1523461_class_en_class'); // Replace with your actual table name
+		gr.query(); // Fetch all records
+        while (gr.next()) {
+			var courseLabels = [];
+            var courseIds = gr.getValue('courses').split(','); // Assuming 'courses' is a comma-separated list
+
+            for (var i = 0; i < courseIds.length; i++) {
+                var courseGr = new GlideRecord('x_1523461_class_en_course'); // Replace with your course table name
+                if (courseGr.get(courseIds[i])) {
+                    courseLabels.push(courseGr.getValue('course_name')); // Replace 'name' with the actual label field for the courses
+                }
+            }
+            records.push({
+                sys_id: gr.getUniqueValue(),
+                name: gr.getValue('section'), // Assuming 'section' is the field you want to display
+				
+				courses: courseIds,
+                courseLabels: courseLabels 
+            });
+        }
+
+        return JSON.stringify(records); // Return the records as a JSON string
+    },
+
+    type: 'GetTableRecords'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-28 15:55:03</sys_created_on>
+        <sys_id>1755a0d3c38e1610b69df8ddd4013173</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>GetTableRecords</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_script_include_1755a0d3c38e1610b69df8ddd4013173</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-12-04 07:27:05</sys_updated_on>
+    </sys_script_include>
+</record_update>

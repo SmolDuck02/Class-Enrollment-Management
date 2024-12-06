@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <condition/>
+        <description/>
+        <local_or_existing>Local</local_or_existing>
+        <name>GetTableRecords</name>
+        <operation display_value="execute">execute</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-28 15:55:04</sys_created_on>
+        <sys_id>54072457c38e1610b69df8ddd40131db</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetTableRecords</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_security_acl_54072457c38e1610b69df8ddd40131db</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-28 16:42:16</sys_updated_on>
+        <type display_value="client_callable_script_include">client_callable_script_include</type>
+    </sys_security_acl>
+</record_update>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sc_req_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create Enrollment Record</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	var enrollment = new GlideRecord('x_1523461_class_en_enrollment');
+        enrollment.initialize();
+        enrollment.student = current.variables.student; // Set student
+        enrollment.course_id = current.variables.course;   // Set course
+        enrollment.section = current.variables.section; // Set section
+        enrollment.insert(); // Insert the record into the Enrollment table
+
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-26 07:15:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9fac9ca2c3c25210b69df8ddd40131df</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Create Enrollment Record</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_script_9fac9ca2c3c25210b69df8ddd40131df</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-26 07:21:49</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=9fac9ca2c3c25210b69df8ddd40131df"/>
+</record_update>

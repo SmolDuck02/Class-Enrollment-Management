@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Student Redirection</description>
+        <global>false</global>
+        <ignore_in_now_experience>false</ignore_in_now_experience>
+        <name>x_1523461_class_en.StudentRedirection</name>
+        <script><![CDATA[if (user.hasRole("x_1523461_class_en.student") && window.location.pathname !== "/cem") {
+    window.location = "/cem";  // Redirect the student to the Service Portal
+}]]></script>
+        <script_name>StudentRedirection</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-11-23 09:38:33</sys_created_on>
+        <sys_id>d1b0ededc3825210b69df8ddd4013123</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>x_1523461_class_en.StudentRedirection</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_ui_script_d1b0ededc3825210b69df8ddd4013123</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-11-23 10:09:16</sys_updated_on>
+        <ui_type>0</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

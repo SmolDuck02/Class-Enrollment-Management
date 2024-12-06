@@ -4,15 +4,15 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-11-23 06:51:23</sys_created_on>
         <sys_id>5229786dc30e1210310bfa0ed4013100</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_1523461_class_en_enrollment.x_1523461_class_en.teacher</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1523461_class_en_enrollment.x_1523461_class_en.administrator</sys_name>
         <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
         <sys_security_acl display_value="x_1523461_class_en_enrollment">e4396025c3ca1210310bfa0ed401311f</sys_security_acl>
         <sys_update_name>sys_security_acl_role_5229786dc30e1210310bfa0ed4013100</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-11-23 06:51:23</sys_updated_on>
-        <sys_user_role display_value="x_1523461_class_en.teacher" name="x_1523461_class_en.teacher">47803461c30e1210310bfa0ed4013150</sys_user_role>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-29 02:22:33</sys_updated_on>
+        <sys_user_role display_value="x_1523461_class_en.administrator" name="x_1523461_class_en.administrator">d5c0b861c30e1210310bfa0ed4013135</sys_user_role>
     </sys_security_acl_role>
 </record_update>

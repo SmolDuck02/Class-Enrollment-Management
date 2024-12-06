@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="bb2968e5c3ca1210310bfa0ed4013153" label="Enrollment" max_length="40" name="x_1523461_class_en_enrollment" type="collection">
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="State" max_length="40" name="state" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Approved" value="2"/>
-                <element inactive_on_update="false" label="Rejected" value="3"/>
                 <element inactive_on_update="false" label="Pending" value="1"/>
+                <element inactive_on_update="false" label="Rejected" value="3"/>
+                <element inactive_on_update="false" label="Approved" value="2"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="encode_utf8=false" label="Course ID" max_length="32" name="course_id" reference="x_1523461_class_en_course" type="reference"/>
-        <element attributes="encode_utf8=false" label="Section" max_length="32" name="section" reference="x_1523461_class_en_course" type="reference"/>
+        <element attributes="encode_utf8=false" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" dependent="course_id" dependent_on_field="course_id" label="Section" max_length="32" name="section" reference="x_1523461_class_en_class" reference_qual="javascript: 'coursesCONTAINS' + current.course_id" type="reference" use_dependent_field="true" use_dynamic_default="true" use_reference_qualifier="advanced"/>
         <element attributes="encode_utf8=false" label="Student" max_length="32" name="student" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="course_id"/>

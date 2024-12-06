@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view">
+    <sys_ui_view action="DELETE">
+        <group/>
+        <hidden>false</hidden>
+        <name>my_students_view</name>
+        <roles>x_1523461_class_en.teacher</roles>
+        <sys_class_name>sys_ui_view</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-25 14:23:55</sys_created_on>
+        <sys_id>6235f052c3421210b69df8ddd4013162</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Students View</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_ui_view_6235f052c3421210b69df8ddd4013162</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-25 14:23:55</sys_updated_on>
+        <title>My Students View</title>
+        <user/>
+    </sys_ui_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</application>
+        <file_path/>
+        <instance_id>4d31bb971b713d501024eb9b2d4bcbf9</instance_id>
+        <instance_name>dev187349</instance_name>
+        <name>sys_ui_view_6235f052c3421210b69df8ddd4013162</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_view"><sys_ui_view action="INSERT_OR_UPDATE"><group/><hidden>false</hidden><name>my_students_view</name><roles>x_1523461_class_en.teacher</roles><sys_class_name>sys_ui_view</sys_class_name><sys_created_by>j.ursonal</sys_created_by><sys_created_on>2024-11-25 14:23:55</sys_created_on><sys_id>6235f052c3421210b69df8ddd4013162</sys_id><sys_mod_count>0</sys_mod_count><sys_name>My Students View</sys_name><sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package><sys_policy/><sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope><sys_update_name>sys_ui_view_6235f052c3421210b69df8ddd4013162</sys_update_name><sys_updated_by>j.ursonal</sys_updated_by><sys_updated_on>2024-11-25 14:23:55</sys_updated_on><title>My Students View</title><user/></sys_ui_view></record_update>]]></payload>
+        <payload_hash>1550650327</payload_hash>
+        <record_name>My Students View</record_name>
+        <reverted_from/>
+        <source>2f1da161c3065210b69df8ddd4013112</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-25 14:23:56</sys_created_on>
+        <sys_id>f355b052c3421210b69df8ddd4013179</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19363b5247e0000001</sys_recorded_at>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-25 14:23:56</sys_updated_on>
+        <type>UI View</type>
+        <update_guid>f755b05269421210ee4b4d9ce2d25378</update_guid>
+        <update_guid_history>f755b05269421210ee4b4d9ce2d25378:1550650327</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-25 15:01:59</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_view">sys_ui_view</sys_db_object>
+        <sys_id>9d76eda20b0f45d68c63361ecdbd5cc4</sys_id>
+        <sys_metadata>6235f052c3421210b69df8ddd4013162</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My Students View</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_scope_delete display_value="">0405e08b62054e2090a0f39653c91640</sys_scope_delete>
+        <sys_update_name>sys_ui_view_6235f052c3421210b69df8ddd4013162</sys_update_name>
+        <sys_update_version display_value="sys_ui_view_6235f052c3421210b69df8ddd4013162">f355b052c3421210b69df8ddd4013179</sys_update_version>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-25 15:01:59</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

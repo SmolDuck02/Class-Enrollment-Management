@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="Course Popularity Report">7d699b53c34e5610b69df8ddd4013106</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>cem.admin</sys_created_by>
+        <sys_created_on>2024-11-29 04:54:30</sys_created_on>
+        <sys_id>f1699b53c34e5610b69df8ddd4013107</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>7d699b53c34e5610b69df8ddd4013106</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_report_users_groups_f1699b53c34e5610b69df8ddd4013107</sys_update_name>
+        <sys_updated_by>cem.admin</sys_updated_by>
+        <sys_updated_on>2024-11-29 04:54:30</sys_updated_on>
+        <user_id display_value="CEM Admin">6132b7d6c3ce1210b69df8ddd4013124</user_id>
+    </sys_report_users_groups>
+</record_update>
