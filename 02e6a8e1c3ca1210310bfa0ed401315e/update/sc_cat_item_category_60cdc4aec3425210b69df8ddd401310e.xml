@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Inititally Enroll in Class">7e91c82ec3025210b69df8ddd40131ec</sc_cat_item>
+        <sc_category display_value="Quick Links">91a9e0510a0a3c7401d20d86782fc9a0</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-26 06:09:20</sys_created_on>
+        <sys_id>60cdc4aec3425210b69df8ddd401310e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Quick Links.Enroll in Class</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sc_cat_item_category_60cdc4aec3425210b69df8ddd401310e</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-26 06:09:20</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

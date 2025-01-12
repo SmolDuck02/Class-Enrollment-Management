@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $http) {
+    // Function to log the selected value
+    $scope.logSelectedValue = function() {
+        alert("You have selected the course: " + $scope.course.label);
+
+        $rootScope.$broadcast('selectedValueChanged', $scope.course.label);
+    };
+
+};
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Style the container to ensure proper spacing */&#13;
+div {&#13;
+    display: flex;&#13;
+    flex-direction: column;&#13;
+  /*  gap: 1rem; */&#13;
+  /* Adds spacing between elements */&#13;
+    width: 100%; /* Ensures the container takes up full width */&#13;
+    max-width: 600px; /* Optional: Sets a max width for better usability */&#13;
+    margin: 0 auto; /* Centers the container on the page */&#13;
+  padding-bottom: 2rem;&#13;
+}&#13;
+&#13;
+/* Style the label */&#13;
+label {&#13;
+    font-size: 1rem;&#13;
+    font-weight: bold;&#13;
+    color: #333; /* A classy dark color */&#13;
+}&#13;
+&#13;
+/* Style the dropdown */&#13;
+select {&#13;
+    width: 100%; /* Makes the dropdown fill the parent width */&#13;
+    padding: 0.5rem;&#13;
+    font-size: 1rem;&#13;
+    border: 2px solid #ccc; /* Subtle border */&#13;
+    border-radius: 5px; /* Slightly rounded corners */&#13;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */&#13;
+    background-color: #fff; /* Clean white background */&#13;
+    color: #333; /* Text color */&#13;
+    transition: border-color 0.3s ease; /* Smooth hover effect */&#13;
+}&#13;
+&#13;
+/* Change the border color when the dropdown is focused */&#13;
+select:focus {&#13;
+    border-color: #007bff; /* Blue border on focus */&#13;
+    outline: none; /* Removes the default focus outline */&#13;
+}&#13;
+&#13;
+/* Style the button */&#13;
+button {&#13;
+    padding: 0.7rem;&#13;
+    width: 100%; /* Makes the button fill the parent width */&#13;
+    font-size: 1rem;&#13;
+    font-weight: bold;&#13;
+    text-transform: uppercase;&#13;
+    color: #fff; /* White text */&#13;
+    background-color: $brand-primary;  /* Primary blue background */&#13;
+    border: none;&#13;
+    border-radius: 5px; /* Rounded corners for the button */&#13;
+    cursor: pointer; /* Changes the cursor on hover */&#13;
+    transition: background-color 0.3s ease, transform 0.2s ease;&#13;
+}&#13;
+&#13;
+/* Change the background and add a hover effect */&#13;
+button:hover {&#13;
+    filter: brightness(90%);  /* Darker blue on hover */&#13;
+    transform: scale(1.02); /* Slight zoom effect */&#13;
+  border-radius: 5px; &#13;
+}&#13;
+&#13;
+/* Add a pressed effect */&#13;
+button:active {&#13;
+    transform: scale(0.98); /* Slight shrink effect */&#13;
+    filter: birghtness(80%); /* Even darker blue */&#13;
+  border-radius: 5px; /&#13;
+}&#13;
+</css>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,display_field</field_list>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Table Dropdown</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    // Query the Course table (replace with actual course table name if needed)
+    var tableName = options.table;  // Default to course table if not provided
+	var gr = new GlideRecord(tableName);
+
+    gr.query();
+    var courses = [];
+	
+	while (gr.next()) {
+        var courseName = gr.getValue(options.display_field);  // Get the value of the display field (e.g., 'course_name')
+        var courseId = gr.getUniqueValue();  // Get the sys_id for the course
+
+        // Only add courses with valid names and IDs
+        if (courseName && courseId) {
+            courses.push({
+                label: courseName,  // Set the course name as the label
+                value: courseId     // Set the sys_id as the value
+            });
+        }
+    }
+
+    // Pass the course list to the client
+    data.courses = courses;
+	data.tableName = tableName.split('_').pop();
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-23 11:59:46</sys_created_on>
+        <sys_id>1ee08a69c3465210b69df8ddd401318a</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>Table Dropdown</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sp_widget_1ee08a69c3465210b69df8ddd401318a</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-24 08:52:22</sys_updated_on>
+        <template><![CDATA[<div>
+    <label for="Dropdown">Select a {{data.tableName}}:</label>
+    <select 
+        id="Dropdown" 
+        ng-model="course"  
+        ng-options="course.label for course in c.data.courses track by course.value"
+            ng-change="logSelectedValue()">
+        <option value="">-- Select a {{data.tableName}} --</option>
+    </select>
+</div>
+
+
+]]></template>
+    </sp_widget>
+</record_update>

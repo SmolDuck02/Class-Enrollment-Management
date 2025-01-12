@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1523461_class_en.GetSectionForCourse</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GetSectionForCourse</name>
+        <script><![CDATA[var GetSectionForCourse = Class.create();
+GetSectionForCourse.prototype = {
+    initialize: function() {
+    },
+	getSections: function(courseId) {
+        var sections = [];
+        var sectionGR = new GlideRecord('x_1523461_class_en_class'); // replace with your actual table name
+        sectionGR.addQuery('courses', courseId); // Adjust to your table structure
+        sectionGR.query();
+
+        while (sectionGR.next()) {
+            sections.push({
+                value: sectionGR.sys_id + '',
+                label: sectionGR.name + '' // Or any other field you want to display
+            });
+        }
+
+        return sections;
+    },
+
+    type: 'GetSectionForCourse'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-26 09:26:34</sys_created_on>
+        <sys_id>f57a7ceac3465210b69df8ddd401319e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetSectionForCourse</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sys_script_include_f57a7ceac3465210b69df8ddd401319e</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-12-04 07:27:28</sys_updated_on>
+    </sys_script_include>
+</record_update>

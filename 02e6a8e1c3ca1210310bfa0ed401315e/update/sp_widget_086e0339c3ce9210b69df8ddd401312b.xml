@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function($scope, $http) {
+    var c = this;
+
+    // Initialize models
+    $scope.selectedCourse = null;
+    $scope.selectedSection = null;
+    $scope.filteredSections = [];
+
+    // Function to filter sections based on the selected course
+    $scope.filterSections = function() {
+        if (!$scope.selectedCourse) {
+            $scope.filteredSections = []; // No course selected, clear sections
+            return;
+        }
+	
+        // Filter sections where the course is included in the `courses` field
+        $scope.filteredSections = c.data.sections.filter(function(section) {
+            return section.courses.includes($scope.selectedCourse.value);
+        });
+    };
+
+
+
+
+    // // Function to log the selected value
+    // $scope.logSelectedValue = function() {
+    //     alert("You have selected the course: " + $scope.selectedSection.label + " and " + $scope.selectedCourse.label);
+	// 	var enrollmentData = {
+    //         user: c.data.currentUser, // Assume `currentUser` is passed from the server
+    //         courseId: $scope.selectedCourse.value,
+    //         section: $scope.selectedSection.value,
+    //     };
+    //     $rootScope.$broadcast('enrollmentData', enrollmentData);
+    // };
+
+
+
+
+
+    // Function to handle enrollment submission
+    $scope.submitEnrollment = function() {
+        var enrollmentData = {
+            student: c.data.currentUser, // Assume `currentUser` is passed from the server
+            course_id: $scope.selectedCourse.value,
+            section: $scope.selectedSection.value,
+        };
+		console.log('wef', JSON.stringify(enrollmentData));
+
+		// Call the REST API to insert a new record
+        $http.post('/api/now/table/x_1523461_class_en_enrollment', enrollmentData)
+            .then(function(response) {
+                console.log('Record Created:', response.data);
+                alert('Record successfully created!');
+            })
+            .catch(function(error) {
+                console.error('Error Creating Record:', error);
+                alert('Failed to create record.');
+            });
+
+        // Call server script to insert record
+//         c.server.update().then(function(response) {
+// 		console.log('Enrollment Data:', response);
+// 			c.data.courses = "fefe";
+//             if (response.success) {
+//                 alert('Enrollment successful!');
+//             } else {
+//                 alert('Failed to enroll. Please try again.');
+//             }
+//         }).catch(function(error) {
+//     console.log('Server call failed:', error); // Log server call error
+// });
+
+    };
+};
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Style the container to ensure proper spacing */&#13;
+div {&#13;
+    display: flex;&#13;
+    flex-direction: column;&#13;
+  /*  gap: 1rem; */&#13;
+  /* Adds spacing between elements */&#13;
+    width: 100%; /* Ensures the container takes up full width */&#13;
+    max-width: 600px; /* Optional: Sets a max width for better usability */&#13;
+    margin: 0 auto; /* Centers the container on the page */&#13;
+  padding-bottom: 2rem;&#13;
+}&#13;
+&#13;
+/* Style the label */&#13;
+label {&#13;
+    font-size: 1rem;&#13;
+    font-weight: bold;&#13;
+    color: #333; /* A classy dark color */&#13;
+}&#13;
+&#13;
+/* Style the dropdown */&#13;
+select {&#13;
+    width: 100%; /* Makes the dropdown fill the parent width */&#13;
+    padding: 0.5rem;&#13;
+    font-size: 1rem;&#13;
+    border: 2px solid #ccc; /* Subtle border */&#13;
+    border-radius: 5px; /* Slightly rounded corners */&#13;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */&#13;
+    background-color: #fff; /* Clean white background */&#13;
+    color: #333; /* Text color */&#13;
+    transition: border-color 0.3s ease; /* Smooth hover effect */&#13;
+}&#13;
+&#13;
+/* Change the border color when the dropdown is focused */&#13;
+select:focus {&#13;
+    border-color: #007bff; /* Blue border on focus */&#13;
+    outline: none; /* Removes the default focus outline */&#13;
+}&#13;
+&#13;
+/* Style the button */&#13;
+button {&#13;
+    padding: 0.7rem;&#13;
+    width: 100%; /* Makes the button fill the parent width */&#13;
+    font-size: 1rem;&#13;
+    font-weight: bold;&#13;
+    text-transform: uppercase;&#13;
+    color: #fff; /* White text */&#13;
+    background-color: $brand-primary;  /* Primary blue background */&#13;
+    border: none;&#13;
+    border-radius: 5px; /* Rounded corners for the button */&#13;
+    cursor: pointer; /* Changes the cursor on hover */&#13;
+    transition: background-color 0.3s ease, transform 0.2s ease;&#13;
+}&#13;
+&#13;
+/* Change the background and add a hover effect */&#13;
+button:hover {&#13;
+    filter: brightness(90%);  /* Darker blue on hover */&#13;
+    transform: scale(1.02); /* Slight zoom effect */&#13;
+  border-radius: 5px; &#13;
+}&#13;
+&#13;
+/* Add a pressed effect */&#13;
+button:active {&#13;
+    transform: scale(0.98); /* Slight shrink effect */&#13;
+    filter: birghtness(80%); /* Even darker blue */&#13;
+  border-radius: 5px; /&#13;
+}&#13;
+</css>
+        <data_table>sp_instance_table</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list>table,display_field</field_list>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>Ambot Dropdown</name>
+        <option_schema>[{"name":"always_show","section":"Behavior","label":"Show even when empty","type":"boolean"},{"name":"panel_body_height","section":"Presentation","label":"List body height","type":"string"},{"name":"image_field","section":"Presentation","label":"Image field","type":"field_name"},{"name":"secondary_fields","section":"Data","label":"Secondary fields","type":"field_list"},{"name":"rounded_images","section":"Presentation","label":"Rounded images","type":"boolean"},{"displayValue":"Page","name":"list_page","section":"Data","label":"List page","type":"reference","value":"sp_page","ed":{"reference":"sp_page"}},{"name":"hide_footer","section":"Presentation","label":"Hide Footer","type":"boolean"},{"displayValue":"UI View","hint":"View to use when target page is a form","name":"view","section":"Behavior","label":"View","type":"reference","value":"sys_ui_view","ed":{"reference":"sys_ui_view"}},{"hint":"If checked, Simple List will not automatically updated based on changes to the filtered records","name":"disable_record_watcher","section":"Behavior","label":"Disable record watcher","type":"boolean"},{"name":"filter_acls","section":"Data","default_value":"false","label":"Enforce field-level Read ACLs on Filter query terms (may alter the query for unprivileged users)","type":"boolean"}]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    var courseTable = 'x_1523461_class_en_course'; // Replace with your actual course table
+    var sectionTable = 'x_1523461_class_en_class'; // Replace with your actual section table
+
+    // Fetch courses
+    var courseGr = new GlideRecord(courseTable);
+    courseGr.query();
+    var courses = [];
+    while (courseGr.next()) {
+        courses.push({
+            value: courseGr.getUniqueValue(), // Sys ID of the course
+            label: courseGr.getValue('course_name') // Name or display field of the course
+        });
+    }
+
+    // Fetch sections and their related courses
+    var sectionGr = new GlideRecord(sectionTable);
+    sectionGr.query();
+    var sections = [];
+    while (sectionGr.next()) {
+        sections.push({
+            value: sectionGr.getUniqueValue(), // Sys ID of the section
+            label: sectionGr.getValue('section'), // Name or display field of the section
+            courses: sectionGr.getValue('courses').split(',') 
+			// Related course sys_ids
+        });
+    }
+
+    // Pass data to the client
+    data.courses = courses;
+    data.sections = sections;
+	data.currentUser = gs.getUserID();
+
+	// Check if input contains data for enrollment
+		gs.info('GInput Data: ' + JSON.stringify(input));
+   if (input && input.currentUser && input.courses && input.sections && input.courses.length > 0 && input.sections.length > 0) {
+    gs.info('Input Data: ' + JSON.stringify(input));
+
+    // Get selected course and section from input (you can adjust this logic as needed)
+    var selectedCourseId = input.courses[0].value; // You might need to adjust how the course is selected (first in the array, etc.)
+    var selectedSectionId = input.sections[0].value; // Same as above for the section
+
+        var enrollmentGr = new GlideRecord('x_1523461_class_en_enrollment'); // Replace 'enrollment' with the actual Enrollment table name
+        enrollmentGr.initialize();
+        enrollmentGr.setValue('student', input.user);
+        enrollmentGr.setValue('course_id', input.courseId);
+        enrollmentGr.setValue('section', input.section);
+
+        try {
+            enrollmentGr.insert();
+            data.success = true; // Indicate success to the client
+        } catch (e) {
+            gs.error('Failed to insert enrollment record: ' + e.message);
+            data.success = false; // Indicate failure to the client
+        }
+    }else{
+		console.log('notinh');
+	}
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-24 12:15:27</sys_created_on>
+        <sys_id>086e0339c3ce9210b69df8ddd401312b</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>Ambot Dropdown</sys_name>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sp_widget_086e0339c3ce9210b69df8ddd401312b</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-24 16:16:53</sys_updated_on>
+        <template><![CDATA[<div>
+    <!-- Course Dropdown -->
+    <label for="courseDropdown">Select a Course:</label>
+    <select id="courseDropdown" ng-model="selectedCourse" ng-options="course.label for course in data.courses track by course.value" ng-change="filterSections()">
+        <option value="">-- Select a Course --</option>
+    </select>
+</div>
+
+<div>
+    <!-- Section Dropdown -->
+    <label for="sectionDropdown">Select a Section:</label>
+    <select id="sectionDropdown" ng-model="selectedSection" ng-change="logSelectedValue()" ng-disabled="!selectedCourse" ng-options="section.label for section in filteredSections track by section.value">
+        <option value="">-- Select a Section --</option>
+    </select>
+</div>
+
+
+<div>
+    <!-- Submit Button -->
+    <button ng-click="submitEnrollment()" ng-disabled="!selectedCourse || !selectedSection">
+        Enroll
+    </button>
+</div>]]></template>
+    </sp_widget>
+</record_update>

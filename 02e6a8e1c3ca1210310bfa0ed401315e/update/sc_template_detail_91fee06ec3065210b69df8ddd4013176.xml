@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_template_detail">
+    <sc_template_detail action="INSERT_OR_UPDATE">
+        <applies_to_multi_row_variable_set>false</applies_to_multi_row_variable_set>
+        <item_option_new display_value="Short description">53304df273221010c84e2bb43cf6a7bc</item_option_new>
+        <mandatory>false</mandatory>
+        <readonly>true</readonly>
+        <restricted>false</restricted>
+        <set/>
+        <sys_class_name>sc_template_detail</sys_class_name>
+        <sys_created_by>j.ursonal</sys_created_by>
+        <sys_created_on>2024-11-26 08:34:23</sys_created_on>
+        <sys_id>91fee06ec3065210b69df8ddd4013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
+        <sys_update_name>sc_template_detail_91fee06ec3065210b69df8ddd4013176</sys_update_name>
+        <sys_updated_by>j.ursonal</sys_updated_by>
+        <sys_updated_on>2024-11-26 08:34:23</sys_updated_on>
+        <template display_value="CEM Enroll Form">c1eea06ec3065210b69df8ddd401312f</template>
+        <value/>
+    </sc_template_detail>
+</record_update>

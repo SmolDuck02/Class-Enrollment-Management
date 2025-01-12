@@ -3,32 +3,32 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>section</element>
-            <list_id display_value="x_1523461_class_en_class" element="NULL" name="x_1523461_class_en_class" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">98cb6ca9c3ca1210310bfa0ed4013111</list_id>
+            <list_id display_value="x_1523461_class_en_class" element="NULL" name="x_1523461_class_en_class" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51af74dec3421210b69df8ddd40131b5</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-23 05:46:28</sys_created_on>
-            <sys_id>d4cb6ca9c3ca1210310bfa0ed4013112</sys_id>
+            <sys_created_by>j.ursonal</sys_created_by>
+            <sys_created_on>2024-11-25 15:08:48</sys_created_on>
+            <sys_id>9daf74dec3421210b69df8ddd40131b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-23 05:46:28</sys_updated_on>
+            <sys_updated_by>j.ursonal</sys_updated_by>
+            <sys_updated_on>2024-11-25 15:08:48</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>teacher</element>
-            <list_id display_value="x_1523461_class_en_class" element="NULL" name="x_1523461_class_en_class" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">98cb6ca9c3ca1210310bfa0ed4013111</list_id>
+            <list_id display_value="x_1523461_class_en_class" element="NULL" name="x_1523461_class_en_class" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">51af74dec3421210b69df8ddd40131b5</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-23 05:46:28</sys_created_on>
-            <sys_id>58cb6ca9c3ca1210310bfa0ed4013112</sys_id>
+            <sys_created_by>j.ursonal</sys_created_by>
+            <sys_created_on>2024-11-25 15:08:48</sys_created_on>
+            <sys_id>11af74dec3421210b69df8ddd40131b6</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-23 05:46:28</sys_updated_on>
+            <sys_updated_by>j.ursonal</sys_updated_by>
+            <sys_updated_on>2024-11-25 15:08:48</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -41,19 +41,19 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2024-11-23 05:46:28</sys_created_on>
+            <sys_created_by>j.ursonal</sys_created_by>
+            <sys_created_on>2024-11-25 15:08:48</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>98cb6ca9c3ca1210310bfa0ed4013111</sys_id>
+            <sys_id>51af74dec3421210b69df8ddd40131b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_1523461_class_en_class</sys_name>
             <sys_package display_value="Class Enrollment Management" source="x_1523461_class_en">02e6a8e1c3ca1210310bfa0ed401315e</sys_package>
             <sys_policy/>
             <sys_scope display_value="Class Enrollment Management">02e6a8e1c3ca1210310bfa0ed401315e</sys_scope>
             <sys_update_name>sys_ui_list_x_1523461_class_en_class_null</sys_update_name>
-            <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2024-11-23 05:46:28</sys_updated_on>
+            <sys_updated_by>j.ursonal</sys_updated_by>
+            <sys_updated_on>2024-11-25 15:08:48</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

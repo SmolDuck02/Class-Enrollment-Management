@@ -52,7 +52,7 @@
         <update_guid_history>8ec27ce19b0e1210fe1f4a81c8ebde08:-140388872</update_guid_history>
     </sys_update_version>
     <sys_metadata_delete action="INSERT_OR_UPDATE">
-        <sys_audit_delete display_value="My Classes">49337425c30e1210310bfa0ed401313a</sys_audit_delete>
+        <sys_audit_delete display_value="">49337425c30e1210310bfa0ed401313a</sys_audit_delete>
         <sys_class_name>sys_metadata_delete</sys_class_name>
         <sys_created_by>l.baclayon</sys_created_by>
         <sys_created_on>2024-11-23 06:19:00</sys_created_on>
